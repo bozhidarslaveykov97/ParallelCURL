@@ -7,6 +7,7 @@
 
 A PHP class providing an easy interface for running multiple concurrent CURL requests
 
+///
 <?php
 $parallel_curl = new ParallelCurl($max_requests, $curl_options);
 $parallel_curl->startRequest("https://google.com", 
@@ -28,3 +29,4 @@ class MyClass {
     echo $content;
   }
 }
+///
