@@ -1,7 +1,7 @@
 {
     "name": "selfworks/parallelcurl",
     "description": "A PHP class providing an easy interface for running multiple concurrent CURL requests.",
-    "license": "Apache 2.0",
+    "license": "Apache License",
     "keywords": [
         "php", "curl", "class", "api", "client", "framework", "http client",
         "http", "json", "requests", "rest", "restful", "web service", "xml"
