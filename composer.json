@@ -1,5 +1,5 @@
 {
-    "name": "selfworks/ParallelCURL",
+    "name": "selfworks/parallelcurl",
     "require": {
        "php": ">=5.3.3"
     }
