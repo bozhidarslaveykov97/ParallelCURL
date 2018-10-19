@@ -33,6 +33,8 @@
 //
 // By Bozhidar Slaveykov <selfworksbg@gmail.com>, freely reusable
 
+namespace SelfWorks\PrallelCURL;
+
 class ParallelCurlClass {
 
     public $max_requests;
