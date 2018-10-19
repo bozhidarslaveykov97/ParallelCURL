@@ -1,5 +1,5 @@
 # ParallelCURL
-
+[![GitHub release](https://img.shields.io/github/release/selfworks/ParallelCURL.svg)](https://github.com/selfworks/ParallelCURL/releases)
 [![GitHub stars](https://img.shields.io/github/stars/selfworks/ParallelCURL.svg)](https://github.com/selfworks/ParallelCURL/stargazers)
 [![Github All Releases](https://img.shields.io/github/downloads/selfworks/ParallelCURL/total.svg)](https://github.com/selfworks/ParallelCURL)
 [![GitHub issues](https://img.shields.io/github/issues/selfworks/ParallelCURL.svg)](https://github.com/selfworks/ParallelCURL/issues)
