@@ -9,18 +9,28 @@ A PHP class providing an easy interface for running multiple concurrent CURL req
 
 ```
 <?php
-$parallel_curl = new ParallelCurl($max_requests, $curl_options);
-$parallel_curl->startRequest("https://google.com", 
+$maxRequests = 2;
+$curlOptions = array(
+    CURLOPT_SSL_VERIFYPEER => FALSE,
+    CURLOPT_SSL_VERIFYHOST => FALSE,
+    CURLOPT_FOLLOWLOCATION => 1,
+    CURLOPT_VERBOSE => 0,
+    CURLOPT_TIMEOUT => 15,
+    CURLOPT_ENCODING => 'gzip, deflate',
+);
+
+$parallelCurl = new ParallelCurl($maxRequests, $curlOptions);
+$parallelCurl->startRequest("https://google.com", 
     array(
         'class'=>'MyClass',
         'function'=>'onRequestDone'
     ));
 
-$parallel_curl->startRequest("https://youtube.com", array(
+$parallelCurl->startRequest("https://youtube.com", array(
         'class'=>'MyClass',
         'function'=>'onRequestDone'
 ));
-$parallel_curl->finishAllRequests();
+$parallelCurl->finishAllRequests();
 
 class MyClass {
 
