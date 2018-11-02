@@ -19,25 +19,16 @@ $curlOptions = array(
     CURLOPT_ENCODING => 'gzip, deflate',
 );
 
-$parallelCurl = new ParallelCurl($maxRequests, $curlOptions);
+$parallelCurl = new \SelfWorks\PrallelCURL\ParallelCurlClass($maxRequests, $curlOptions);
 $parallelCurl->startRequest("https://google.com", 
     array(
-        'class'=>'MyClass',
-        'function'=>'onRequestDone'
+        'request_id'=>1
     ));
 
 $parallelCurl->startRequest("https://youtube.com", array(
-        'class'=>'MyClass',
-        'function'=>'onRequestDone'
+        'request_id'=>2
 ));
-$parallelCurl->finishAllRequests();
+$requestedContent = $parallelCurl->finishAllRequests();
 
-class MyClass {
-
-  // Request is done
-  public function onRequestDone($content) {
-    echo $content;
-  }
-}
 ?>
 ```
